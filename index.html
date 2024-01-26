@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Info Pokémon</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://api.fontshare.com/v2/css?f[]=tanker@400&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://api.fontshare.com/v2/css?f[]=satoshi@1,900,700,500,300,400&display=swap"
+      rel="stylesheet"
+    />
+    <!-- axios -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  </head>
+  <body>
+    <div id="main">
+      <div class="main-title">Info Pokemon</div>
+      <div class="content">
+        <!-- search section  -->
+        <div class="search">
+          <input id="searchInput" type="text" />
+          <button id="searchBtn"><img src="search.png" alt="" /></button>
+        </div>
+
+        <div class="detail">
+          <div class="top-part">
+            <div class="top-left">
+              <img
+                src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/5.png"
+                alt=""
+              />
+              <div class="types">ELECTRIC</div>
+            </div>
+            <div class="top-right">
+              <div class="decription">
+                <h2>PIKACHU <span>#id</span></h2>
+                <span>Height: 5</span> <br />
+                <span>Weight: 60</span>
+              </div>
+            </div>
+          </div>
+          <div class="bottom-part">
+            <div class="description">
+              <div class="heading-decription">
+                <h3>BASE</h3>
+                <h3>STATS</h3>
+              </div>
+
+              <div class="ability">
+                <span>Hp</span>
+                <span>20</span>
+              </div>
+              <div class="ability">
+                <span>Attack</span>
+                <span>20</span>
+              </div>
+              <div class="ability">
+                <span>Defence</span>
+                <span>20</span>
+              </div>
+              <div class="ability">
+                <span>Special Attack</span>
+                <span>20</span>
+              </div>
+              <div class="ability">
+                <span>Special Defence</span>
+                <span>20</span>
+              </div>
+              <div class="ability">
+                <span>Speed</span>
+                <span>20</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- javascript -->
+    <script src="script.js"></script>
+  </body>
+</html>
