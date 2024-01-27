@@ -21,25 +21,28 @@
       <div class="main-title">Info Pokémon</div>
       <div class="content">
         <!-- search section  -->
-        <div class="search">
-          <input id="searchInput" type="text" />
-          <button id="searchBtn"><img src="assets/search.png" alt="" /></button>
-        </div>
+        <form class="search" action="">
+          <input id="userInput" type="text" required />
+          <button id="searchBtn" onclick="fetchApi()" type="button">
+            <img src="assets/search.png" alt="" />
+          </button>
+        </form>
 
         <div class="detail">
           <div class="top-part">
             <div class="top-left">
               <img
+                id="image"
                 src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/5.png"
                 alt=""
               />
-              <div class="types">ELECTRIC</div>
+              <div class="types" id="types">ELECTRIC</div>
             </div>
             <div class="top-right">
               <div class="decription">
-                <h2>PIKACHU <span>#id</span></h2>
-                <span>Height: 5</span> <br />
-                <span>Weight: 60</span>
+                <h2 id="name"></h2>
+                <div>Height: <span id="height"></span></div>
+                <div>Weight: <span id="weight"></span></div>
               </div>
             </div>
           </div>
@@ -52,27 +55,27 @@
 
               <div class="ability">
                 <span>Hp</span>
-                <span>20</span>
+                <span id="hp">20</span>
               </div>
               <div class="ability">
                 <span>Attack</span>
-                <span>20</span>
+                <span id="attack">20</span>
               </div>
               <div class="ability">
                 <span>Defence</span>
-                <span>20</span>
+                <span id="defence">20</span>
               </div>
               <div class="ability">
                 <span>Special Attack</span>
-                <span>20</span>
+                <span id="special-attack">20</span>
               </div>
               <div class="ability">
-                <span>Special Defence</span>
+                <span id="special-defence">Special Defence</span>
                 <span>20</span>
               </div>
               <div class="ability">
                 <span>Speed</span>
-                <span>20</span>
+                <span id="speed">20</span>
               </div>
             </div>
           </div>
