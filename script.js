@@ -1,6 +1,10 @@
 function fetchApi() {
-  const userInputValue = document.getElementById("userInput").value;
+  const userInputValue = document
+    .getElementById("userInput")
+    .value.toLowerCase();
+
   const apiUrl = `https://pokeapi-proxy.freecodecamp.rocks/api/pokemon/${userInputValue}`;
+
   axios
     .get(apiUrl)
     .then((response) => {
@@ -8,7 +12,7 @@ function fetchApi() {
       const pokemonId = response.data.id;
       const pokemonWeight = response.data.weight;
       const pokemonHeight = response.data.height;
-      const pokemonImage = response.data.sprites.back_default;
+      const pokemonImage = response.data.sprites.front_shiny;
       const pokemonType = response.data.types[0].type.name;
       const pokemonHp = response.data.stats[0].base_stat;
       const pokemonAttack = response.data.stats[1].base_stat;
@@ -51,6 +55,7 @@ function fetchApi() {
     })
     .catch((error) => {
       console.error("Axios error", error);
+      alert("Pokemon not found!");
     });
 }
 

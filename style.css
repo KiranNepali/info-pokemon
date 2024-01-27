@@ -96,7 +96,10 @@ button img {
   align-items: center;
   justify-content: center;
   gap: 1rem;
+  position: relative;
+  z-index: 30;
 }
+
 .detail .bottom-part {
   width: 35rem;
   height: 18rem;
@@ -114,6 +117,15 @@ button img {
   align-items: center;
 }
 
+.top-part .bg-detail {
+  position: absolute;
+  content: "";
+  background-color: rgb(209, 203, 198);
+  width: 35rem;
+  height: 15rem;
+  border-radius: 0 4rem;
+  z-index: -1;
+}
 .top-part .top-right {
   height: 15rem;
   width: 15rem;
@@ -121,6 +133,10 @@ button img {
   display: flex;
   justify-content: start;
   align-items: center;
+}
+
+#name {
+  text-transform: uppercase;
 }
 
 .top-left img {
